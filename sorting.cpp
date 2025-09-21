@@ -33,7 +33,24 @@ void bubblesort(int array[], int size)
 
         if(!swapped) break; //if no swaps in this pass then the array is already sored and hence no futhure checking should be done 
     }
+} 
+
+
+void insertionSort(int arr[], int size){ 
+    for(int i=0;i<=size-1;i++){
+        int j=i; 
+        while(j>0 && arr[j-1]>arr[j]){
+            int temp=arr[j-1]; 
+            arr[j-1]=arr[j]; 
+            arr[j]=temp; 
+            j--; 
+        } 
+        
+    }
+
+ 
 }
+
 
 int main()
 {
@@ -53,6 +70,17 @@ int main()
     {
         cout << array[i] << " ";
     } 
+     
+    cout<<"PRINTING INSERTION SORT"<<endl;
+    //insertionSort(array,5);
+    
+    for(int i = 0; i < 5; i++)
+    {
+        insertionSort(array,5);
+        cout << array[i] << " ";
+    } 
+   
+
 
     return 0;
 }
